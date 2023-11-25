@@ -1,22 +1,31 @@
-// learning about Props, children, export, import, optional chain, destructer ...etc.
+// learning about rendering items in list, map function, importance of key ...etc.
 
 import React from "react";
-import Button from "./components/Button.jsx";
+import Text from "./components/Text.jsx";
+
 
 function App() {
 
-    // console.log(Button());
-
-    const handleParentClick = () => {
-        console.log("This is clicked from parent component");
-    }
+    const data = [
+        {id: 1, text: "javascript"},
+        {id: 2, text: "python"},
+        {id: 3, text: "java"},
+        {id: 4, text: "C/C++"},
+        {id: 5, text: "HTML/CSS"},
+    ]
 
     return (
+        // <Text>
+        //     {data[0].text}
+        // </Text>
         <>
-            <h1>App Component</h1>
-            <Button 
-                data={{a: {g: {f: "d"}}}}
-                onClick={handleParentClick}>Click me</Button>
+            {
+                data.map((item) => {
+                    return (
+                        <Text key={item.id}>{item.text}</Text>
+                    );
+                })
+            }
         </>
     );
 }
