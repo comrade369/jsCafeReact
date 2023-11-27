@@ -1,12 +1,12 @@
 
 import React from "react";
-import StateExample from "./components/StateExample.jsx";
+import EffectExample from "./components/EffectExample.jsx";
 
 function App() {
 
     return (
         <>
-            <StateExample />
+            <EffectExample />
         </>
     );
 }

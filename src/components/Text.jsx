@@ -1,14 +1,18 @@
 
-import React from "react";
+import React, {useEffect} from "react";
 
 function Text(props) {
 
-    console.log(props);
-    const {children} = props;
+    const {children, externalData} = props;
+
+    // This Effect listens to props, and accepts functions as dependencies as well.
+    useEffect(() => {
+        console.log("External data changed to ", externalData);
+    }, [externalData]);
 
     return (
         <div>
-            {children}
+            {externalData}
         </div>
     );
 }
