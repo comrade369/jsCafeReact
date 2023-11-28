@@ -1,12 +1,12 @@
 
 import React from "react";
-import EffectExample from "./components/EffectExample.jsx";
+import LayoutEffectExample from "./components/LayoutEffectExample.jsx";
 
 function App() {
 
     return (
         <>
-            <EffectExample />
+            <LayoutEffectExample />
         </>
     );
 }
